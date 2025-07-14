@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #e6f7ff; /* azul pastel claro */
   color: #333333;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,7 +8,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #7d9fa4;
+  color: #7d9fa4; /* gris azulado suave */
 }
 
 #mesh {
@@ -19,9 +19,9 @@ h1, h2 {
   margin-top: 30px;
 }
 
-/* Semestre base styles (se comparten) */
 .semester {
-  border: 2px solid #ccc;
+  background-color: #f0e6ff; /* morado pastel suave */
+  border: 2px solid #c9b3ff; /* morado más marcado */
   border-radius: 10px;
   padding: 10px;
   width: 260px;
@@ -29,77 +29,12 @@ h1, h2 {
 
 .semester h3 {
   text-align: center;
+  color: #8c7ae6; /* morado pastel medio */
   margin-top: 0;
 }
 
-/* Semestres con colores distintos */
-.semester:nth-of-type(1) {
-  background-color: #d3f8e2;
-  border-color: #b2f2c2;
-}
-.semester:nth-of-type(1) h3 {
-  color: #66bb6a;
-}
-
-.semester:nth-of-type(2) {
-  background-color: #e0f7fa;
-  border-color: #b2ebf2;
-}
-.semester:nth-of-type(2) h3 {
-  color: #26c6da;
-}
-
-.semester:nth-of-type(3) {
-  background-color: #e8eaf6;
-  border-color: #c5cae9;
-}
-.semester:nth-of-type(3) h3 {
-  color: #5c6bc0;
-}
-
-.semester:nth-of-type(4) {
-  background-color: #fff9c4;
-  border-color: #fff59d;
-}
-.semester:nth-of-type(4) h3 {
-  color: #fbc02d;
-}
-
-.semester:nth-of-type(5) {
-  background-color: #fde2e4;
-  border-color: #f8bbd0;
-}
-.semester:nth-of-type(5) h3 {
-  color: #f06292;
-}
-
-.semester:nth-of-type(6) {
-  background-color: #e2f0cb;
-  border-color: #c5e1a5;
-}
-.semester:nth-of-type(6) h3 {
-  color: #8bc34a;
-}
-
-.semester:nth-of-type(7) {
-  background-color: #f3e5f5;
-  border-color: #e1bee7;
-}
-.semester:nth-of-type(7) h3 {
-  color: #ab47bc;
-}
-
-.semester:nth-of-type(8) {
-  background-color: #d0f0fd;
-  border-color: #b3e5fc;
-}
-.semester:nth-of-type(8) h3 {
-  color: #29b6f6;
-}
-
-/* Subject (materia) styles comunes */
 .subject {
-  background-color: #b3ffe0;
+  background-color: #b3ffe0; /* verde agua pastel */
   border: 2px solid #c9ffe8;
   border-radius: 8px;
   padding: 8px;
@@ -117,7 +52,7 @@ h1, h2 {
 }
 
 .subject.approved {
-  background-color: #d3f8e2;
+  background-color: #d3f8e2; /* verde pastel muy suave */
   color: #666666;
   font-weight: bold;
   text-decoration: line-through;
