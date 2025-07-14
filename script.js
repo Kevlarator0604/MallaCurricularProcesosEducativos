@@ -69,18 +69,30 @@ const subjects = [
 
 const mesh = document.getElementById("mesh");
 
-subjects.forEach((subj) => {
-  const div = document.createElement("div");
-  div.className = "subject";
-  div.textContent = subj.name;
-  div.dataset.name = subj.name;
-  subj.el = div;
-  if (!subj.lockedBy) {
-    div.classList.add("unlocked");
-  }
-  div.addEventListener("click", () => approveSubject(subj));
-  mesh.appendChild(div);
-});
+for (let sem = 1; sem <= 8; sem++) {
+  const semesterDiv = document.createElement("div");
+  semesterDiv.className = "semester";
+  const title = document.createElement("h3");
+  title.textContent = `${sem}° semestre`;
+  semesterDiv.appendChild(title);
+
+  subjects
+    .filter(s => s.semester === sem)
+    .forEach(subj => {
+      const div = document.createElement("div");
+      div.className = "subject";
+      div.textContent = subj.name;
+      div.dataset.name = subj.name;
+      subj.el = div;
+      if (!subj.lockedBy) {
+        div.classList.add("unlocked");
+      }
+      div.addEventListener("click", () => approveSubject(subj));
+      semesterDiv.appendChild(div);
+    });
+
+  mesh.appendChild(semesterDiv);
+}
 
 function approveSubject(subj) {
   if (!subj.el.classList.contains("unlocked")) return;
@@ -88,8 +100,8 @@ function approveSubject(subj) {
   subj.el.classList.remove("unlocked");
 
   if (subj.unlocks) {
-    subj.unlocks.forEach((name) => {
-      const unlocked = subjects.find((s) => s.name === name);
+    subj.unlocks.forEach(name => {
+      const unlocked = subjects.find(s => s.name === name);
       if (unlocked && canUnlock(unlocked)) {
         unlocked.el.classList.add("unlocked");
       }
@@ -99,8 +111,8 @@ function approveSubject(subj) {
 
 function canUnlock(subj) {
   if (!subj.lockedBy) return true;
-  return subj.lockedBy.every((name) => {
-    const prereq = subjects.find((s) => s.name === name);
+  return subj.lockedBy.every(name => {
+    const prereq = subjects.find(s => s.name === name);
     return prereq && prereq.el.classList.contains("approved");
   });
 }
