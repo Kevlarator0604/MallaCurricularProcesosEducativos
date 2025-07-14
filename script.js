@@ -117,4 +117,7 @@ function approveSubject(subj) {
 function canUnlock(subj) {
   if (!subj.lockedBy) return true;
   return subj.lockedBy.every(name => {
-    const prer
+    const prereq = subjects.find(s => s.name === name);
+    return prereq && prereq.el.classList.contains("approved");
+  });
+}
