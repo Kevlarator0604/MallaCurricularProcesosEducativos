@@ -1,6 +1,6 @@
 body {
-  background-color: #e6f7ff; /* azul pastel claro */
-  color: #333333;
+  background-color: #0a192f;
+  color: #ffffff;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
@@ -8,7 +8,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #7d9fa4; /* gris azulado suave */
+  color: #66ff99;
 }
 
 #mesh {
@@ -20,8 +20,8 @@ h1, h2 {
 }
 
 .semester {
-  background-color: #f0e6ff; /* morado pastel suave */
-  border: 2px solid #c9b3ff; /* morado más marcado */
+  background-color: rgba(102, 255, 153, 0.1);
+  border: 2px solid #66ff99;
   border-radius: 10px;
   padding: 10px;
   width: 260px;
@@ -29,13 +29,13 @@ h1, h2 {
 
 .semester h3 {
   text-align: center;
-  color: #8c7ae6; /* morado pastel medio */
+  color: #66ff99;
   margin-top: 0;
 }
 
 .subject {
-  background-color: #b3ffe0; /* verde agua pastel */
-  border: 2px solid #c9ffe8;
+  background-color: #66ff99;
+  border: 2px solid #b6ffcc;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -44,7 +44,6 @@ h1, h2 {
   opacity: 0.6;
   margin: 5px 0;
   user-select: none;
-  color: #333333;
 }
 
 .subject.unlocked {
@@ -52,8 +51,8 @@ h1, h2 {
 }
 
 .subject.approved {
-  background-color: #d3f8e2; /* verde pastel muy suave */
-  color: #666666;
+  background-color: #b6ffcc;
+  color: #0a192f;
   font-weight: bold;
   text-decoration: line-through;
 }
