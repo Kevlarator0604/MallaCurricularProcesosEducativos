@@ -69,6 +69,7 @@ const subjects = [
 
 const mesh = document.getElementById("mesh");
 
+// Crear contenedores por semestre
 for (let sem = 1; sem <= 8; sem++) {
   const semesterDiv = document.createElement("div");
   semesterDiv.className = "semester";
@@ -84,9 +85,12 @@ for (let sem = 1; sem <= 8; sem++) {
       div.textContent = subj.name;
       div.dataset.name = subj.name;
       subj.el = div;
+
+      // Verificar si tiene requisitos
       if (!subj.lockedBy) {
         div.classList.add("unlocked");
       }
+
       div.addEventListener("click", () => approveSubject(subj));
       semesterDiv.appendChild(div);
     });
@@ -96,6 +100,7 @@ for (let sem = 1; sem <= 8; sem++) {
 
 function approveSubject(subj) {
   if (!subj.el.classList.contains("unlocked")) return;
+
   subj.el.classList.add("approved");
   subj.el.classList.remove("unlocked");
 
@@ -112,7 +117,4 @@ function approveSubject(subj) {
 function canUnlock(subj) {
   if (!subj.lockedBy) return true;
   return subj.lockedBy.every(name => {
-    const prereq = subjects.find(s => s.name === name);
-    return prereq && prereq.el.classList.contains("approved");
-  });
-}
+    const prer
