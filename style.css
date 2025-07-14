@@ -62,4 +62,67 @@ h1, h2 {
   border-color: #fff59d;
 }
 .semester:nth-of-type(4) h3 {
-  color: #fbc02d
+  color: #fbc02d;
+}
+
+.semester:nth-of-type(5) {
+  background-color: #fde2e4;
+  border-color: #f8bbd0;
+}
+.semester:nth-of-type(5) h3 {
+  color: #f06292;
+}
+
+.semester:nth-of-type(6) {
+  background-color: #e2f0cb;
+  border-color: #c5e1a5;
+}
+.semester:nth-of-type(6) h3 {
+  color: #8bc34a;
+}
+
+.semester:nth-of-type(7) {
+  background-color: #f3e5f5;
+  border-color: #e1bee7;
+}
+.semester:nth-of-type(7) h3 {
+  color: #ab47bc;
+}
+
+.semester:nth-of-type(8) {
+  background-color: #d0f0fd;
+  border-color: #b3e5fc;
+}
+.semester:nth-of-type(8) h3 {
+  color: #29b6f6;
+}
+
+/* Subject (materia) styles comunes */
+.subject {
+  background-color: #b3ffe0;
+  border: 2px solid #c9ffe8;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+  opacity: 0.6;
+  margin: 5px 0;
+  user-select: none;
+  color: #333333;
+}
+
+.subject.unlocked {
+  opacity: 1;
+}
+
+.subject.approved {
+  background-color: #d3f8e2;
+  color: #666666;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.subject:hover {
+  transform: scale(1.05);
+}
