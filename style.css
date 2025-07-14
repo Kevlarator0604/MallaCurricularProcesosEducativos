@@ -8,7 +8,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #66d9ff;
+  color: #66ff99;
 }
 
 #mesh {
@@ -20,8 +20,8 @@ h1, h2 {
 }
 
 .semester {
-  background-color: rgba(102, 217, 255, 0.1);
-  border: 2px solid #66d9ff;
+  background-color: rgba(102, 255, 153, 0.1);
+  border: 2px solid #66ff99;
   border-radius: 10px;
   padding: 10px;
   width: 260px;
@@ -29,13 +29,13 @@ h1, h2 {
 
 .semester h3 {
   text-align: center;
-  color: #66d9ff;
+  color: #66ff99;
   margin-top: 0;
 }
 
 .subject {
-  background-color: #66d9ff;
-  border: 2px solid #aeefff;
+  background-color: #66ff99;
+  border: 2px solid #b6ffcc;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -51,7 +51,7 @@ h1, h2 {
 }
 
 .subject.approved {
-  background-color: #aeefff;
+  background-color: #b6ffcc;
   color: #0a192f;
   font-weight: bold;
   text-decoration: line-through;
@@ -60,4 +60,3 @@ h1, h2 {
 .subject:hover {
   transform: scale(1.05);
 }
-
