@@ -14,7 +14,7 @@ const subjects = [
   { name: "Teorías Educativas", semester: 2 },
   { name: "Antropología de la Educación", semester: 2 },
   { name: "Sociología de la Educación", semester: 2 },
-  { name: "Metodologías y Estrategias de Enseñanza y Aprendizaje", semester: 2, unlocks: ["Planeación Educativa"], lockedBy: ["Didáctica General y Específicas"] },
+  { name: "Metodologías y Estrategias de Enseñanza y Aprendizaje", semester: 2, unlocks: ["Planeación Didáctica"], lockedBy: ["Didáctica General y Específicas"] },
   { name: "Administración y Gestión Educativa", semester: 2, unlocks: ["Administración de Recursos Humanos"] },
 
   // Semestre 3
