@@ -29,7 +29,7 @@ const subjects = [
   // Semestre 4
   { name: "Lengua Extranjera IV", semester: 4, lockedBy: ["Lengua Extranjera III"] },
   { name: "Sistema Educativo Mexicano", semester: 4, unlocks: ["Políticas Educativas"] },
-  { name: "Materiales y Recursos Didácticos", semester: 4, unlocks: ["Diseño Curricular"], lockedBy: ["Planeación Educativa"] },
+  { name: "Materiales y Recursos Didácticos", semester: 4, unlocks: ["Diseño Curricular"], lockedBy: ["Planeación Didáctica"] },
   { name: "Docencia en Modalidades Mixtas", semester: 4, unlocks: ["Gestión de Programas Educativos en Modalidades Mixtas"], lockedBy: ["Programas Educativos en Modalidades Mixtas"] },
   { name: "Fundamentos de la Formación Docente", semester: 4, unlocks: ["Estrategias para la Formación de Profesores y Capacitadores"] },
   { name: "Educación Sociocomunitaria", semester: 4, unlocks: ["Pedagogía Social y Desarrollo"] },
