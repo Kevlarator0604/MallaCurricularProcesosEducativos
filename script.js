@@ -20,7 +20,7 @@ const subjects = [
   // Semestre 3
   { name: "Lengua Extranjera III", semester: 3, unlocks: ["Lengua Extranjera IV"], lockedBy: ["Lengua Extranjera II"] },
   { name: "Psicología de la Educación", semester: 3, lockedBy: ["Psicología del Desarrollo y Procesos Cognitivos"] },
-  { name: "Planeación Educativa", semester: 3, unlocks: ["Materiales y Recursos Didácticos"], lockedBy: ["Metodologías y Estrategias de Enseñanza y Aprendizaje"] },
+  { name: "Planeación Didáctica", semester: 3, unlocks: ["Materiales y Recursos Didácticos"], lockedBy: ["Metodologías y Estrategias de Enseñanza y Aprendizaje"] },
   { name: "Administración de Recursos Humanos", semester: 3, unlocks: ["Diseño y Financiamiento de Programas y Proyectos"], lockedBy: ["Administración y Gestión Educativa"] },
   { name: "Programas Educativos en Modalidades Mixtas", semester: 3, unlocks: ["Docencia en Modalidades Mixtas"] },
   { name: "Coordinación y Manejo de Grupos", semester: 3 },
