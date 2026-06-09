@@ -29,7 +29,10 @@ const subjects = [
   // Semestre 4
   { name: "Lengua Extranjera IV", semester: 4, lockedBy: ["Lengua Extranjera III"] },
   { name: "Sistema Educativo Mexicano", semester: 4, unlocks: ["Políticas Educativas"] },
+
+  // ← CORREGIDO AQUÍ
   { name: "Materiales y Recursos Didácticos", semester: 4, unlocks: ["Diseño Curricular"], lockedBy: ["Planeación Didáctica"] },
+
   { name: "Docencia en Modalidades Mixtas", semester: 4, unlocks: ["Gestión de Programas Educativos en Modalidades Mixtas"], lockedBy: ["Programas Educativos en Modalidades Mixtas"] },
   { name: "Fundamentos de la Formación Docente", semester: 4, unlocks: ["Estrategias para la Formación de Profesores y Capacitadores"] },
   { name: "Educación Sociocomunitaria", semester: 4, unlocks: ["Pedagogía Social y Desarrollo"] },
@@ -73,6 +76,7 @@ const mesh = document.getElementById("mesh");
 for (let sem = 1; sem <= 8; sem++) {
   const semesterDiv = document.createElement("div");
   semesterDiv.className = "semester";
+
   const title = document.createElement("h3");
   title.textContent = `${sem}° semestre`;
   semesterDiv.appendChild(title);
@@ -86,7 +90,6 @@ for (let sem = 1; sem <= 8; sem++) {
       div.dataset.name = subj.name;
       subj.el = div;
 
-      // Verificar si tiene requisitos
       if (!subj.lockedBy) {
         div.classList.add("unlocked");
       }
@@ -99,7 +102,12 @@ for (let sem = 1; sem <= 8; sem++) {
 }
 
 function approveSubject(subj) {
-  if (!subj.el.classList.contains("unlocked")) return;
+  if (
+    !subj.el.classList.contains("unlocked") ||
+    subj.el.classList.contains("approved")
+  ) {
+    return;
+  }
 
   subj.el.classList.add("approved");
   subj.el.classList.remove("unlocked");
@@ -107,6 +115,7 @@ function approveSubject(subj) {
   if (subj.unlocks) {
     subj.unlocks.forEach(name => {
       const unlocked = subjects.find(s => s.name === name);
+
       if (unlocked && canUnlock(unlocked)) {
         unlocked.el.classList.add("unlocked");
       }
@@ -116,8 +125,12 @@ function approveSubject(subj) {
 
 function canUnlock(subj) {
   if (!subj.lockedBy) return true;
+
   return subj.lockedBy.every(name => {
     const prereq = subjects.find(s => s.name === name);
-    return prereq && prereq.el.classList.contains("approved");
+
+    return prereq &&
+           prereq.el &&
+           prereq.el.classList.contains("approved");
   });
 }
